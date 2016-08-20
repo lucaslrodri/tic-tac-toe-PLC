@@ -1,0 +1,509 @@
+(*************** QuickLD compiler **********************)
+(*************** Copyright ICS Triplex ISaGRAF *********)
+(*************** ST ************************************)
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB1 := B1_1C ;
+__EDTB2 := B1_1R ;
+B1_1R := (__EDTB1 OR __EDTB2) AND NOT(RESET) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB3 := B1_2C ;
+__EDTB4 := B1_2R ;
+B1_2R := (__EDTB3 OR __EDTB4) AND NOT(RESET) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB5 := B1_3C ;
+__EDTB6 := B1_3R ;
+B1_3R := (__EDTB5 OR __EDTB6) AND NOT(RESET) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB7 := B2_1C ;
+__EDTB8 := B2_1R ;
+B2_1R := (__EDTB7 OR __EDTB8) AND NOT(RESET) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB9 := B2_2C ;
+__EDTB10 := B2_2R ;
+B2_2R := (__EDTB9 OR __EDTB10) AND NOT(RESET) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB11 := B2_3C ;
+__EDTB12 := B2_3R ;
+B2_3R := (__EDTB11 OR __EDTB12) AND NOT(RESET) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB13 := B3_1C ;
+__EDTB14 := B3_1R ;
+B3_1R := (__EDTB13 OR __EDTB14) AND NOT(RESET) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB15 := B3_2C ;
+__EDTB16 := B3_2R ;
+B3_2R := (__EDTB15 OR __EDTB16) AND NOT(RESET) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB17 := B3_3C ;
+__EDTB18 := B3_3R ;
+B3_3R := (__EDTB17 OR __EDTB18) AND NOT(RESET) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+(* Operator output on : XOR with __EDTB19 *)
+__EDTB19 := (B1_1R XOR B1_2R) ;
+__MO_XOR_1 := __EDTB19 ;
+AUX1 := __EDTB19 ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+(* Operator output on : XOR with __EDTB20 *)
+__EDTB20 := (B1_3R XOR B2_1R) ;
+__MO_XOR_2 := __EDTB20 ;
+AUX2 := __EDTB20 ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+(* Operator output on : XOR with __EDTB21 *)
+__EDTB21 := (B2_2R XOR B2_3R) ;
+__MO_XOR_3 := __EDTB21 ;
+AUX3 := __EDTB21 ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+(* Operator output on : XOR with __EDTB22 *)
+__EDTB22 := (B3_1R XOR B3_2R) ;
+__MO_XOR_4 := __EDTB22 ;
+AUX4 := __EDTB22 ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+(* Operator output on : XOR with __EDTB23 *)
+__EDTB23 := (AUX1 XOR AUX2) ;
+__MO_XOR_5 := __EDTB23 ;
+AUX5 := __EDTB23 ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+(* Operator output on : XOR with __EDTB24 *)
+__EDTB24 := (AUX3 XOR AUX4) ;
+__MO_XOR_6 := __EDTB24 ;
+AUX6 := __EDTB24 ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+(* Operator output on : XOR with __EDTB25 *)
+__EDTB25 := (AUX5 XOR AUX6) ;
+__MO_XOR_7 := __EDTB25 ;
+AUX7 := __EDTB25 ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+(* Operator output on : XOR with __EDTB26 *)
+__EDTB26 := (AUX7 XOR B3_3R) ;
+__MO_XOR_8 := __EDTB26 ;
+JOGADA := __EDTB26 ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB27 := JOGADA AND B1_1C ;
+__EDTB28 := IMAG1_1 ;
+IMAG1_1 := (__EDTB27 OR __EDTB28) AND NOT(RESET) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB29 := JOGADA AND B1_2C ;
+__EDTB30 := IMAG1_2 ;
+IMAG1_2 := (__EDTB29 OR __EDTB30) AND NOT(RESET) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB31 := JOGADA AND B1_3C ;
+__EDTB32 := IMAG1_3 ;
+IMAG1_3 := (__EDTB31 OR __EDTB32) AND NOT(RESET) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB33 := JOGADA AND B2_1C ;
+__EDTB34 := IMAG2_1 ;
+IMAG2_1 := (__EDTB33 OR __EDTB34) AND NOT(RESET) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB35 := JOGADA AND B2_2C ;
+__EDTB36 := IMAG2_2 ;
+IMAG2_2 := (__EDTB35 OR __EDTB36) AND NOT(RESET) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB37 := JOGADA AND B2_3C ;
+__EDTB38 := IMAG2_3 ;
+IMAG2_3 := (__EDTB37 OR __EDTB38) AND NOT(RESET) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB39 := JOGADA AND B3_1C ;
+__EDTB40 := IMAG3_1 ;
+IMAG3_1 := (__EDTB39 OR __EDTB40) AND NOT(RESET) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB41 := JOGADA AND B3_2C ;
+__EDTB42 := IMAG3_2 ;
+IMAG3_2 := (__EDTB41 OR __EDTB42) AND NOT(RESET) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB43 := JOGADA AND B3_3C ;
+__EDTB44 := IMAG3_3 ;
+IMAG3_3 := (__EDTB43 OR __EDTB44) AND NOT(RESET) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB45 := B1_1R AND B1_2R AND B1_3R ;
+__EDTB46 := __EDTB45 AND IMAG1_1 AND IMAG1_2 AND IMAG1_3 ;
+__EDTB47 := __EDTB45 AND NOT(IMAG1_1) AND NOT(IMAG1_2) AND NOT(IMAG1_3) ;
+W1L1 := (__EDTB46 OR __EDTB47) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB48 := B2_1R AND B2_2R AND B2_3R ;
+__EDTB49 := __EDTB48 AND IMAG2_1 AND IMAG2_2 AND IMAG2_3 ;
+__EDTB50 := __EDTB48 AND NOT(IMAG2_1) AND NOT(IMAG2_2) AND NOT(IMAG2_3) ;
+W2L2 := (__EDTB49 OR __EDTB50) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB51 := B3_1R AND B3_2R AND B3_3R ;
+__EDTB52 := __EDTB51 AND IMAG3_1 AND IMAG3_2 AND IMAG3_3 ;
+__EDTB53 := __EDTB51 AND NOT(IMAG3_1) AND NOT(IMAG3_2) AND NOT(IMAG3_3) ;
+W3L3 := (__EDTB52 OR __EDTB53) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB54 := B1_1R AND B2_1R AND B3_1R ;
+__EDTB55 := __EDTB54 AND IMAG1_1 AND IMAG2_1 AND IMAG3_1 ;
+__EDTB56 := __EDTB54 AND NOT(IMAG1_1) AND NOT(IMAG2_1) AND NOT(IMAG3_1) ;
+W4C1 := (__EDTB55 OR __EDTB56) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB57 := B1_2R AND B2_2R AND B3_2R ;
+__EDTB58 := __EDTB57 AND IMAG1_2 AND IMAG2_2 AND IMAG3_2 ;
+__EDTB59 := __EDTB57 AND NOT(IMAG1_2) AND NOT(IMAG2_2) AND NOT(IMAG3_2) ;
+W5C2 := (__EDTB58 OR __EDTB59) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB60 := B1_3R AND B2_3R AND B3_3R ;
+__EDTB61 := __EDTB60 AND IMAG1_3 AND IMAG2_3 AND IMAG3_3 ;
+__EDTB62 := __EDTB60 AND NOT(IMAG1_3) AND NOT(IMAG2_3) AND NOT(IMAG3_3) ;
+W6C3 := (__EDTB61 OR __EDTB62) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB63 := B1_1R AND B2_2R AND B3_3R ;
+__EDTB64 := __EDTB63 AND IMAG1_1 AND IMAG2_2 AND IMAG3_3 ;
+__EDTB65 := __EDTB63 AND NOT(IMAG1_1) AND NOT(IMAG2_2) AND NOT(IMAG3_3) ;
+W7D1 := (__EDTB64 OR __EDTB65) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB66 := B1_3R AND B2_2R AND B3_1R ;
+__EDTB67 := __EDTB66 AND IMAG1_3 AND IMAG2_2 AND IMAG3_1 ;
+__EDTB68 := __EDTB66 AND NOT(IMAG1_3) AND NOT(IMAG2_2) AND NOT(IMAG3_1) ;
+W8D2 := (__EDTB67 OR __EDTB68) ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+__EDTB69 := W1L1 ;
+__EDTB70 := W2L2 ;
+__EDTB71 := (__EDTB69 OR __EDTB70) ;
+__EDTB72 := W3L3 ;
+__EDTB73 := W4C1 ;
+__EDTB74 := W5C2 ;
+__EDTB75 := W6C3 ;
+__EDTB76 := W7D1 ;
+__EDTB77 := W8D2 ;
+__EDTB78 := (__EDTB76 OR __EDTB77) ;
+__EDTB79 := (__EDTB75 OR __EDTB78) ;
+__EDTB80 := (__EDTB74 OR __EDTB79) ;
+__EDTB81 := (__EDTB73 OR __EDTB80) ;
+__EDTB82 := (__EDTB72 OR __EDTB81) ;
+__EDTB83 := (__EDTB71 OR __EDTB82) ;
+VENCEDOR := __EDTB83 AND JOGADA ;
+FINAL := __EDTB83 ;
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Rung **********************************)
+(**)
+(*Label :*)(**)
+
+(*************** Code for the end of Rung **************)
+
+
+(*************** Code for the end of File **************)
+__GL __LG0000 ;
+
+
+
+(*************** Local Symbols table *******************)
+(* __EDTB1 *)
+(* __EDTB2 *)
+(* __EDTB3 *)
+(* __EDTB4 *)
+(* __EDTB5 *)
+(* __EDTB6 *)
+(* __EDTB7 *)
+(* __EDTB8 *)
+(* __EDTB9 *)
+(* __EDTB10 *)
+(* __EDTB11 *)
+(* __EDTB12 *)
+(* __EDTB13 *)
+(* __EDTB14 *)
+(* __EDTB15 *)
+(* __EDTB16 *)
+(* __EDTB17 *)
+(* __EDTB18 *)
+(* __EDTB19 *)
+(* __EDTB20 *)
+(* __EDTB21 *)
+(* __EDTB22 *)
+(* __EDTB23 *)
+(* __EDTB24 *)
+(* __EDTB25 *)
+(* __EDTB26 *)
+(* __EDTB27 *)
+(* __EDTB28 *)
+(* __EDTB29 *)
+(* __EDTB30 *)
+(* __EDTB31 *)
+(* __EDTB32 *)
+(* __EDTB33 *)
+(* __EDTB34 *)
+(* __EDTB35 *)
+(* __EDTB36 *)
+(* __EDTB37 *)
+(* __EDTB38 *)
+(* __EDTB39 *)
+(* __EDTB40 *)
+(* __EDTB41 *)
+(* __EDTB42 *)
+(* __EDTB43 *)
+(* __EDTB44 *)
+(* __EDTB45 *)
+(* __EDTB46 *)
+(* __EDTB47 *)
+(* __EDTB48 *)
+(* __EDTB49 *)
+(* __EDTB50 *)
+(* __EDTB51 *)
+(* __EDTB52 *)
+(* __EDTB53 *)
+(* __EDTB54 *)
+(* __EDTB55 *)
+(* __EDTB56 *)
+(* __EDTB57 *)
+(* __EDTB58 *)
+(* __EDTB59 *)
+(* __EDTB60 *)
+(* __EDTB61 *)
+(* __EDTB62 *)
+(* __EDTB63 *)
+(* __EDTB64 *)
+(* __EDTB65 *)
+(* __EDTB66 *)
+(* __EDTB67 *)
+(* __EDTB68 *)
+(* __EDTB69 *)
+(* __EDTB70 *)
+(* __EDTB71 *)
+(* __EDTB72 *)
+(* __EDTB73 *)
+(* __EDTB74 *)
+(* __EDTB75 *)
+(* __EDTB76 *)
+(* __EDTB77 *)
+(* __EDTB78 *)
+(* __EDTB79 *)
+(* __EDTB80 *)
+(* __EDTB81 *)
+(* __EDTB82 *)
+(* __EDTB83 *)
+
