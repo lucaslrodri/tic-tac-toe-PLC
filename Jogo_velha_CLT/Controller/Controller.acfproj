@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{d9156295-15be-4016-a155-4a30e48fbce3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MyRootNamespace</RootNamespace>
+    <AssemblyName>MyAssemblyName</AssemblyName>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <CAMProjectFile>Controller\PrjLibrary.mdb</CAMProjectFile>
+    <CAMProjectVersion>5.50.3</CAMProjectVersion>
+    <UniqueProjectId>{d9156295-15be-4016-a155-4a30e48fbce3}</UniqueProjectId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'On-line' " />
+  <PropertyGroup Condition=" '$(Configuration)' == 'Simulação' " />
+  <Import Project="$(DevEnvDir)\PackagesToLoad\Targets\ISaGRAF.ISaGRAF5.targets" />
+  <Import Project="$(DevEnvDir)\PackagesToLoad\Targets\ISaGRAF.CCW.targets" />
+</Project>

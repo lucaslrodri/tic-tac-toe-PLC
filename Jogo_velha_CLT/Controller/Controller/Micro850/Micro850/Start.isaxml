@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Pou FileVersion="200.00.003" Name="Start" ElementGuid="79a93594-482b-4abf-8907-d406ad8cace0" Comment="" SingleTextLine="" Language="ST" CustomFbd="0" Localization="Prj" GroupName="(Definido pelo usuário)" GenDebugInfo="false" UseResPassword="true" GenerateSymbMon="true" Is1499="false">
+  <Program />
+  <LocalVars>
+    <Variable Name="R_TRIG_1" DataType="R_TRIG" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="R_TRIG_2" DataType="R_TRIG" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+    <Variable Name="R_TRIG_3" DataType="R_TRIG" InitialValue="" Comment="" Address="" Modifier="NonRetain" Kind="Var" Alias="" AccessRights="ReadWrite" StringSize="0" RetainFlags="" CommentFields="" Attributes="0" GroupName="" />
+  </LocalVars>
+  <PouBody><![CDATA[PROGRAM Start
+R_TRIG_1(onePlayer);
+R_TRIG_2(twoPlayers);
+R_TRIG_3(lanPlayers);
+
+IF R_TRIG_1.Q THEN
+	twoPlayers := FALSE;
+	lanPlayers := FALSE;
+ELSIF R_TRIG_2.Q THEN
+	onePlayer:=FALSE;
+	lanPlayers:=FALSE;
+ELSIF R_TRIG_3.Q THEN
+	onePlayer:=FALSE;
+	twoPlayers:=FALSE;
+END_IF;
+
+IF jogadas = 1 THEN
+	inicio := TRUE;
+ELSE
+	inicio := FALSE;
+END_IF;
+END_PROGRAM]]></PouBody>
+  <PouUIProperties>
+    <Root Version="6">
+  <LanguageContainerStyle CommentTextColor="Green" CommentFont="Courier New, 10pt" PonctuationTextColor="Black" PonctuationFont="Courier New, 10pt" IdentifierTextColor="Black" IdentifierFont="Courier New, 10pt" OperatorTextColor="Black" OperatorFont="Courier New, 10pt" ReservedWordTextColor="Fuchsia" ReservedWordFont="Courier New, 10pt" PouTextColor="BlueViolet" PouFont="Courier New, 10pt" NumberTextColor="Firebrick" NumberFont="Courier New, 10pt" StringTextColor="Gray" StringFont="Courier New, 10pt" EditorTextAreaBackgroundColor="White" EditorFont="Courier New, 10pt" Index="0" />
+</Root>
+  </PouUIProperties>
+</Pou>

@@ -1,0 +1,22 @@
+PROGRAM Start
+R_TRIG_1(onePlayer);
+R_TRIG_2(twoPlayers);
+R_TRIG_3(lanPlayers);
+
+IF R_TRIG_1.Q THEN
+	twoPlayers := FALSE;
+	lanPlayers := FALSE;
+ELSIF R_TRIG_2.Q THEN
+	onePlayer:=FALSE;
+	lanPlayers:=FALSE;
+ELSIF R_TRIG_3.Q THEN
+	onePlayer:=FALSE;
+	twoPlayers:=FALSE;
+END_IF;
+
+IF jogadas = 1 THEN
+	inicio := TRUE;
+ELSE
+	inicio := FALSE;
+END_IF;
+END_PROGRAM
